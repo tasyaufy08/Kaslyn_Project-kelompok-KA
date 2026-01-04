@@ -1,9 +1,17 @@
 pipeline {
     agent any
+
     stages {
+        stage('Checkout SCM') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/tasyaufy08/Kaslyn_Project-kelompok-KA.git'
+            }
+        }
+
         stage('Hello') {
             steps {
-                echo 'My Jenkins Pipeline'
+                echo 'Jenkins CI/CD with GitHub is running'
             }
         }
     }

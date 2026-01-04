@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Checkout SCM') {
             steps {
-                git branch: 'main',
-                    url: 'https://github.com/tasyaufy08/Kaslyn_Project-kelompok-KA.git'
+                checkout scm
             }
         }
 
